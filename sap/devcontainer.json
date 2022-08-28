@@ -1,0 +1,46 @@
+// Devcontainer for SAP Development with CDS, Fiori
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.241.1/containers/javascript-node
+{
+	"name": "SAP-Dev",
+	"build": {
+		"dockerfile": "Dockerfile-SAP",
+		// Update 'VARIANT' to pick a Node version: 18, 16, 14.
+		// Append -bullseye or -buster to pin to an OS version.
+		// Use -bullseye variants on local arm64/Apple Silicon.
+		"args": { "VARIANT": "16-bullseye" }
+	},
+
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"sapse.vscode-cds",
+    			"sapse.sap-ux-fiori-tools-extension-pack"
+			]
+		}
+	},
+
+	"mounts": [
+		"source=${localEnv:HOME}/Scratchpad/cds/,target=/cds,type=bind,consistency=cached"
+	],
+
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [
+        8080,
+        4004
+    ],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+
+	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "node",
+	"runArgs": ["--userns=keep-id", "--group-add=keep-groups"],
+	"containerUser": "node",
+	"remoteEnv": { "LOCAL_USER_PATH": "${localEnv:HOME}${localEnv:USERPROFILE}:/usr/local/share/npm-global/bin:/usr/local/share/nvm/current/bin:/usr/local/share/npm-global/bin:/usr/local/share/nvm/current/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/node/.local/bin" }
+	
+	
+}
