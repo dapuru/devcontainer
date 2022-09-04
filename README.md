@@ -7,6 +7,7 @@
 For more information check:<br>
 used eg. in: https://blogs.sap.com/2022/01/27/boosting-tutorial-ux-with-dev-containers-part-1-challenge-and-base-solution/<br>
 see also: https://code.visualstudio.com/docs/remote/create-dev-container<br>
+https://github.com/devcontainers <br>
 
 ## Why Devcotainer?
 
@@ -57,3 +58,4 @@ I'll collect all my used devcontainer config files in this place.
 ## Further information
 https://blog.daniel-purucker.com/vscode-devcontainer-part-1/ <br>
 https://blog.daniel-purucker.com/vscode-devcontainer-part-2/ <br>
+https://github.com/devcontainers
