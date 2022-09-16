@@ -42,12 +42,10 @@ See also: "Series: Dockerless on mkdev.me" for more pros and cons: (https://mkde
 
 ## Podman installation
 
-https://podman.io/getting-started/installation
+https://podman.io/getting-started/installation <br>
 https://buildah.io/
 
-[code]
-sudo pacman -S podman buildahp
-[/code]
+sudo pacman -S podman buildah
 
 "By default, images are stored in the /var/lib/containers directory when Podman is run by the root user. For standard users, images are typically stored in $HOME/. local/share/containers/storage/ ." (https://docs.oracle.com/en/operating-systems/oracle-linux/podman/podman-ConfiguringStorageforPodman.html)
 
