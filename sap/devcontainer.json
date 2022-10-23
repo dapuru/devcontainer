@@ -18,7 +18,10 @@
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"sapse.vscode-cds",
-    			"sapse.sap-ux-fiori-tools-extension-pack"
+    				"sapse.sap-ux-fiori-tools-extension-pack",
+				"grapecity.gc-excelviewer",
+				"sapse.vscode-wing-cds-editor-vsc",
+				"sapse.vsc-extension-odata-csdl-modeler"
 			]
 		}
 	},
